@@ -14,3 +14,6 @@ Extend the KiskActivity in your MainActivity, and the KioskApplication in your A
 Then, goto the FastFile and AppFile inside fastlane package, and rename the package from `com.eduardonunes.mykioskapplication` with yout own app package.
 
 After this setup you can goto your terminal and run fastlane install_app_owner_debug to setup the kiosk device admin profile enabled and open your kisok app.
+
+# Tweaks
+You may use `showNavigationBar(Boolean)`, `setWindowsImmersiveFocus()`, `enterFullscreen()`, `exitFullscreen()`, and `setAwaysFullScreenMode()` methods to customize your kisok mode navigation in each Activity by your own way :), i recomended use it in `onResume()` method.
