@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyKioskApplication</string>
+    <string name="admin_description">KIOSK MODE DEVICE ADMIN RECEIVER DESCRIPTION</string>
+</resources>

@@ -1,0 +1,42 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+
+  desc "set device owner"
+  def set_device_owner()
+      sh("adb shell dpm set-device-owner com.eduardonunes.mykioskapplication/.receivers.MyDeviceAdminReceiver")
+  end
+
+  desc "install debug app"
+  def install_debug()
+      gradle(task: "installDebug")
+  end
+
+  desc "open app"
+  def open_app()
+     sh("adb shell am start -n com.eduardonunes.mykioskapplication/.ui.MainActivity")
+  end
+
+  desc "Function to install app as device owner in debug mode"
+  lane :install_app_owner_debug do
+      install_debug
+      set_device_owner
+      open_app
+  end
+
+end
