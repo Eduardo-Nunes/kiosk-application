@@ -9,7 +9,7 @@ After create your project, goto the manifest file and paste the same App, MainAc
 Then create your device_admin_receiver.xml in xml folder inside the yout res package,
 Create your MyDeviceAdminReceiver and paste all ActivityExt, ApplicationExt, ContextExt, KioskActivity, and KioskApplication files.
 
-Extend the KiskActivity in your MainActivity, and the KioskApplication in your Application file and name your apllication in manifest file.
+Extend the KioskActivity in your MainActivity, and the KioskApplication in your Application file and name your apllication in manifest file.
 
 Then, goto the FastFile and AppFile inside fastlane package, and rename the package from `com.eduardonunes.mykioskapplication` with yout own app package.
 
